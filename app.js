@@ -118,7 +118,8 @@ var woodlength = {
   9: 0,
 };
 
-addbutton.onclick = function () {
+addbutton.onclick = function (e) {
+  e.preventDefault();
   // add item to list
   let currentitem = {};
   currentitem.name = selectproduct.value;
