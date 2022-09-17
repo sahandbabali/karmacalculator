@@ -1,0 +1,4 @@
+26 shahrivar 1401
+- adding delete button to product list table.
+
+

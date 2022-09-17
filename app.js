@@ -137,10 +137,11 @@ addbutton.onclick = function (e) {
 function updateitemslist() {
   itemstablebody.innerHTML = ``;
   for (var i = 0; i < itemlist.length; i++) {
-    itemstablebody.innerHTML += `<tr>
+    itemstablebody.innerHTML += `<tr id="karmaitemrow${i}">
       <th scope="row">${i + 1}</th>
       <td>${itemlist[i].name}</td>
       <td>${itemlist[i].count}</td>
+      <td><i onclick="karmadeletrow('${i}')" class="fa-solid fa-trash"></i></td>
 </tr>`;
   }
 }
@@ -211,4 +212,14 @@ function updatetotal() {
   });
 
   document.getElementById("totalcmui").innerText = totallist.totalcm;
+}
+
+function karmadeletrow(e) {
+  console.log("karmadeletrow");
+  // edit itemlist array
+  itemlist.splice(e, 1);
+  updateitemslist();
+
+  // updatetotal
+  updatetotal();
 }
