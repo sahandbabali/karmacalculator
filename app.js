@@ -38,53 +38,56 @@ var totallist = {
     7: 0,
     8: 0,
     9: 0,
+    small: 0,
+    large: 0
   },
 };
 
 var productdata = {
-  E1A: { A: 2, I: 1, S: 1, 1: 1 },
-  E1B: { A: 2, II: 1, M: 1, 2: 1 },
-  E2A: { A: 2, I: 1, II: 1, M: 1, 2: 1 },
-  E2D: { B: 2, I: 2, S: 1, 2: 1 },
-  E2L: { B: 1, I: 1, II: 1, V: 1, S: 1, 3: 1 },
+  E1A: { A: 2, I: 1, S: 1, 1: 1, small: 1 },
+  E1B: { A: 2, II: 1, M: 1, 2: 1, large: 1 },
+  E2A: { A: 2, I: 1, II: 1, M: 1, 2: 1,small: 2 },
+  E2D: { B: 2, I: 2, S: 1, 2: 1,small: 2 },
+  E2L: { B: 1, I: 1, II: 1, V: 1, S: 1, 3: 1, small: 1, large: 1 },
 
-  E3L: { B: 1, I: 2, II: 1, V: 1, S: 1, 3: 1 },
-  E2C: { A: 2, I: 1, III: 1, X: 1, 4: 1 },
-  E3A: { A: 2, I: 2, III: 1, X: 1, 4: 1 },
-  E3D: { A: 2, I: 3, II: 1, VI: 1, S: 1, 5: 1 },
-  E4D: { A: 2, I: 4, VI: 1, S: 1, 5: 1 },
+  E3L: { B: 1, I: 2, II: 1, V: 1, S: 1, 3: 1,small: 3 },
+  E2C: { A: 2, I: 1, III: 1, X: 1, 4: 1 , small: 1, large: 1},
+  E3A: { A: 2, I: 2, III: 1, X: 1, 4: 1 ,small: 3},
+  E3D: { A: 2, I: 3, II: 1, VI: 1, S: 1, 5: 1 , small: 2, large: 1},
+  E4D: { A: 2, I: 4, VI: 1, S: 1, 5: 1,small: 4 },
 
-  E2B: { B: 2, II: 2, M: 1, 3: 1 },
-  E3B: { B: 2, I: 1, II: 2, M: 1, 3: 1 },
-  E4A: { B: 2, I: 2, II: 2, M: 1, 3: 1 },
-  E2E: { A: 2, I: 1, IV: 1, Z: 1, 6: 1 },
-  E3E: { A: 2, I: 2, IV: 1, Z: 1, 6: 1 },
+  E2B: { B: 2, II: 2, M: 1, 3: 1 , large: 2},
+  E3B: { B: 2, I: 1, II: 2, M: 1, 3: 1, small: 2, large: 1 },
+  E4A: { B: 2, I: 2, II: 2, M: 1, 3: 1,small: 4 },
+  E2E: { A: 2, I: 1, IV: 1, Z: 1, 6: 1, large: 2 },
+  E3E: { A: 2, I: 2, IV: 1, Z: 1, 6: 1 , small: 2, large: 1 },
 
-  E4E: { A: 2, I: 3, IV: 1, Z: 1, 6: 1 },
-  E4C: { B: 2, I: 2, III: 2, X: 1, 4: 1 },
-  E5A: { B: 2, I: 3, III: 2, X: 1, 4: 1 },
-  E4B: { C: 2, I: 1, II: 3, M: 1, 4: 1 },
-  E5B: { C: 2, I: 2, II: 3, M: 1, 4: 1 },
+  E4E: { A: 2, I: 3, IV: 1, Z: 1, 6: 1,small: 4 },
+  E4C: { B: 2, I: 2, III: 2, X: 1, 4: 1  , small: 2, large: 2},
+  E5A: { B: 2, I: 3, III: 2, X: 1, 4: 1, small: 4, large: 1 },
+  E4B: { C: 2, I: 1, II: 3, M: 1, 4: 1 , small: 2, large: 2},
+  E5B: { C: 2, I: 2, II: 3, M: 1, 4: 1 , small: 4, large: 1},
 
-  E5C: { C: 2, I: 2, II: 3, M: 1, 4: 1 },
-  E6C: { C: 2, I: 3, II: 3, M: 1, 4: 1 },
-  E6A: { B: 2, I: 4, III: 2, M: 1, 4: 1 },
-  E4F: { A: 2, I: 4, IV: 1, VII: 1, M: 1, 7: 1 },
-  E5F: { A: 2, I: 5, IV: 1, VII: 1, M: 1, 7: 1 },
 
-  E6F: { A: 2, I: 6, IV: 1, VII: 1, M: 1, 7: 1 },
-  E6L: { A: 1, C: 1, I: 5, V: 1, VIII: 1, M: 1, 8: 1 },
-  E6E: { B: 2, I: 4, IV: 2, Z: 1, 7: 1 },
-  E6D: { B: 2, I: 4, IV: 2, Z: 1, 7: 1 },
-  E7B: { B: 2, I: 5, IV: 2, Z: 1, 7: 1 },
+  E5C: { C: 2, I: 2, II: 3, M: 1, 4: 1, small: 4, large: 1 },
+  E6C: { C: 2, I: 3, II: 3, M: 1, 4: 1 ,small: 6},
+  E6A: { B: 2, I: 4, III: 2, M: 1, 4: 1 ,small: 6},
+  E4F: { A: 2, I: 4, IV: 1, VII: 1, M: 1, 7: 1 , small: 2, large: 2},
+  E5F: { A: 2, I: 5, IV: 1, VII: 1, M: 1, 7: 1 , small: 4, large: 1},
 
-  E8A: { B: 2, I: 6, IV: 2, Z: 1, 7: 1 },
-  E6B: { C: 2, I: 3, III: 3, X: 1, 8: 1 },
-  E7A: { C: 2, I: 4, III: 3, X: 1, 8: 1 },
-  E9A: { C: 2, I: 6, III: 3, X: 1, 8: 1 },
-  E12: { D: 2, I: 8, IV: 4, Z: 1 },
+  E6F: { A: 2, I: 6, IV: 1, VII: 1, M: 1, 7: 1,small: 6 },
+  E6L: { A: 1, C: 1, I: 5, V: 1, VIII: 1, M: 1, 8: 1,small: 6},
+  E6E: { B: 2, I: 4, IV: 2, Z: 1, 7: 1 , small: 2, large: 2},
+  E6D: { B: 2, I: 4, IV: 2, Z: 1, 7: 1 , small: 4, large: 2},
+  E7B: { B: 2, I: 5, IV: 2, Z: 1, 7: 1 , small: 6, large: 1},
 
-  E16: { D: 2, I: 12, IV: 4, Z: 1 },
+  E8A: { B: 2, I: 6, IV: 2, Z: 1, 7: 1,small: 8 },
+  E6B: { C: 2, I: 3, III: 3, X: 1, 8: 1, small: 3, large: 3 },
+  E7A: { C: 2, I: 4, III: 3, X: 1, 8: 1 , small: 5, large: 2},
+  E9A: { C: 2, I: 6, III: 3, X: 1, 8: 1 ,small: 9},
+  E12: { D: 2, I: 8, IV: 4, Z: 1 ,9:1, small: 8, large: 4},
+
+  E16: { D: 2, I: 12, IV: 4, Z: 1 ,9:1, small: 16},
 };
 
 var woodlength = {
@@ -116,6 +119,8 @@ var woodlength = {
   7: 0,
   8: 0,
   9: 0,
+  small: 0,
+  large: 0
 };
 
 addbutton.onclick = function (e) {
@@ -181,6 +186,8 @@ function updatetotal() {
       7: 0,
       8: 0,
       9: 0,
+      small: 0,
+      large: 0
     },
   };
 
@@ -211,7 +218,9 @@ function updatetotal() {
     }
   });
 
-  document.getElementById("totalcmui").innerText = totallist.totalcm;
+  let totalalvar = (totallist.totalcm/10) / 120;
+  document.getElementById("totalcmui").innerText = totallist.totalcm/10;
+  document.getElementById("totalalvar").innerText = totalalvar.toFixed(2);
 }
 
 function karmadeletrow(e) {
